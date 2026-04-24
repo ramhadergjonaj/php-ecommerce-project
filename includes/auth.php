@@ -1,0 +1,2 @@
+<?php
+// Authentication logic placeholder
