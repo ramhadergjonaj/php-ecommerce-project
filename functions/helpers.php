@@ -64,3 +64,39 @@ function getProducts() {
         )
     ];
 }
+
+function getUserByEmail($email) {
+    $users = getUsers();
+
+    foreach ($users as $user) {
+        if ($user->getEmail() === $email) {
+            return $user;
+        }
+    }
+
+    return null;
+}
+
+function getProductById($id) {
+    $products = getProducts();
+
+    foreach ($products as $product) {
+        if ($product->getId() == $id) {
+            return $product;
+        }
+    }
+
+    return null;
+}
+
+function sortProductsByPrice($products, $order = 'asc') {
+    usort($products, function($a, $b) use ($order) {
+        if ($order === 'asc') {
+            return $a->getPrice() <=> $b->getPrice();
+        }
+
+        return $b->getPrice() <=> $a->getPrice();
+    });
+
+    return $products;
+}
