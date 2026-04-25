@@ -58,6 +58,63 @@ a:hover {
     color: var(--primary-hover);
 }
 
+.navbar {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.brand span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-theme {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.btn-theme:hover {
+    transform: scale(1.1);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -122,4 +179,36 @@ a:hover {
 
 .mt-4 {
     margin-top: 1.5rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a2be2 100%);
+    color: white;
+    border-radius: var(--radius-lg);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-md);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero .btn {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.hero .btn:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255,255,255,0.3);
 }
