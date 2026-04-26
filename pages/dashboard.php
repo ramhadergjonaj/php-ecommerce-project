@@ -53,3 +53,45 @@ $currentUserObj = getUserByEmail($_SESSION['user_email']);
             <div class="stat-label">Produkti i parë së fundmi</div>
         </div>
     </div>
+
+        <div class="dashboard-sections">
+        <div class="card">
+            <h3>Lista e Përdoruesve</h3>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Emri</th>
+                        <th>Email</th>
+                        <th>Roli</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <?php foreach ($users as $u): ?>
+                        <tr>
+                            <td><?php echo $u->getId(); ?></td>
+
+                            <td>
+                                <?php echo htmlspecialchars($u->getName()); ?>
+                            </td>
+
+                            <td>
+                                <?php echo htmlspecialchars($u->getEmail()); ?>
+                            </td>
+
+                            <td>
+                                <span class="badge <?php echo $u->getRole() === 'admin' ? 'badge-admin' : 'badge-user'; ?>">
+                                    <?php echo htmlspecialchars($u->getRole()); ?>
+                                </span>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>
