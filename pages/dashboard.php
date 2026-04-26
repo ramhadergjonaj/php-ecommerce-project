@@ -23,3 +23,33 @@ $currentUserObj = getUserByEmail($_SESSION['user_email']);
             </p>
         <?php endif; ?>
     </div>
+
+        <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">
+                <?php echo count($products); ?>
+            </div>
+            <div class="stat-label">Totali i Produkteve</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-value">
+                <?php echo count($users); ?>
+            </div>
+            <div class="stat-label">Përdorues të Regjistruar</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-value">
+                <?php echo isset($_COOKIE['last_login']) ? date('d/m/Y H:i', strtotime($_COOKIE['last_login'])) : 'E panjohur'; ?>
+            </div>
+            <div class="stat-label">Hyrja e Fundit</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-value">
+                <?php echo isset($_COOKIE['last_visited_product']) ? htmlspecialchars($_COOKIE['last_visited_product']) : 'Asnjë'; ?>
+            </div>
+            <div class="stat-label">Produkti i parë së fundmi</div>
+        </div>
+    </div>
