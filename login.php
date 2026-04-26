@@ -11,6 +11,38 @@ if (isLoggedIn()) {
 
 $error = '';
 
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = cleanInput($_POST['email']);
+    $password = cleanInput($_POST['password']);
+
+    if (empty($email) || empty($password)) {
+        $error = "Të gjitha fushat janë të detyrueshme.";
+    } elseif (!validateEmail($email)) {
+        $error = "Formati i email-it nuk është i saktë.";
+    } else {
+        $user = getUserByEmail($email);
+
+        if ($user && $user->verifyPassword($password)) {
+            $_SESSION['user_id'] = $user->getId();
+            $_SESSION['user_name'] = $user->getName();
+            $_SESSION['user_email'] = $user->getEmail();
+            $_SESSION['user_role'] = $user->getRole();
+
+            setcookie('last_login', date('Y-m-d H:i:s'), time() + (86400 * 30), "/");
+
+            if ($user->getRole() === 'admin') {
+                header("Location: /pages/dashboard.php");
+            } else {
+                header("Location: /index.php");
+            }
+
+            exit;
+        }
+
+        $error = "Kredencialet janë të gabuara.";
+    }
+}
+
 require_once __DIR__ . '/includes/header.php';
 ?>
 
