@@ -1,0 +1,4 @@
+-- Version final: ekzekutoni në phpMyAdmin (një nga një, nëse duhet):
+-- 1. database/add_password_reset.sql
+-- 2. database/add_returns_and_google.sql
+-- 3. database/add_contact_replies.sql
