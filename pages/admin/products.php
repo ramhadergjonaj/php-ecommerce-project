@@ -183,3 +183,4 @@ require_once __DIR__ . '/../../includes/header.php';
 <script src="<?php echo e(base_url('assets/js/admin-products.js')); ?>"></script>
 
 <?php require_once __DIR__ . '/../../includes/footer.php'; ?>
+//products
