@@ -12,3 +12,4 @@ function cleanInput(string $data): string
 {
     return trim(stripslashes($data));
 }
+//security
