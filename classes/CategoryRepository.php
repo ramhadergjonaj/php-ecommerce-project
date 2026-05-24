@@ -75,3 +75,4 @@ class CategoryRepository
         return (int) $stmt->fetchColumn();
     }
 }
+//CategoryRepository.php
