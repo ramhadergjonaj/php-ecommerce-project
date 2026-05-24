@@ -28,3 +28,4 @@ function redirect_to(string $path): void
     header('Location: ' . base_url($path));
     exit;
 }
+//app
