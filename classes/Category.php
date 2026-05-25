@@ -38,4 +38,3 @@ class Category
         $this->description = $description;
     }
 }
-// pjesa per category.php

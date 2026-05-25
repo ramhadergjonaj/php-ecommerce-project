@@ -96,4 +96,3 @@ class ProductRepository
         return (int) $this->db->query('SELECT COUNT(*) FROM products')->fetchColumn();
     }
 }
-//Product repository.php
