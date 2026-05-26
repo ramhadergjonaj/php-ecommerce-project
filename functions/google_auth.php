@@ -77,7 +77,7 @@ function googleExchangeCode(string $code): ?array
 
     return is_array($data) ? $data : null;
 }
-
+//.
 function googleFetchUserInfo(string $accessToken): ?array
 {
     $ctx = stream_context_create([

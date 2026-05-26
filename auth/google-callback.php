@@ -27,7 +27,7 @@ try {
     if (!$profile || empty($profile['email'])) {
         throw new RuntimeException('Profili Google i paplotë');
     }
-
+    //.
     $googleId = $profile['id'];
     $email = strtolower($profile['email']);
     $name = $profile['name'] ?? explode('@', $email)[0];
