@@ -107,6 +107,7 @@ function smtpSend(array $cfg, string $to, string $subject, string $body, ?string
     smtpExpect($socket, [250, 251]);
     smtpCmd($socket, 'DATA');
     smtpExpect($socket, [354]);
+    //.
 
     $message = 'From: ' . $cfg['from_name'] . ' <' . $from . ">\r\n";
     $message .= 'To: <' . $to . ">\r\n";
