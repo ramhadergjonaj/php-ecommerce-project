@@ -28,6 +28,7 @@ foreach ($configs as $label => $c) {
         echo 'DËSHTOI: ' . $e->getMessage() . "\n";
     }
 }
+//.
 
 echo "\n\nPHP që po ekzekuton: " . PHP_VERSION . "\n";
 echo "Skedari php.ini: " . (php_ini_loaded_file() ?: 'i panjohur') . "\n";
