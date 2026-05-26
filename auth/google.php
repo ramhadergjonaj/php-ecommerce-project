@@ -14,5 +14,7 @@ if (!$url) {
     redirect_to('login.php');
 }
 
+
 header('Location: ' . $url);
-exit;
+exit; 
+//.
