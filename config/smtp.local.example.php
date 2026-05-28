@@ -5,6 +5,7 @@
  * Gmail: përdorni "App Password" (2FA duhet aktiv).
  * https://myaccount.google.com/apppasswords
  */
+//.
 define('SMTP_ENABLED', true);
 define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_PORT', 587);

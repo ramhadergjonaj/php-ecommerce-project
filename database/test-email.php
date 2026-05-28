@@ -7,7 +7,7 @@ require_once dirname(__DIR__) . '/functions/mailer.php';
 header('Content-Type: text/plain; charset=UTF-8');
 
 $cfg = getSmtpConfig();
-
+//.
 echo "SMTP enabled: " . ($cfg['enabled'] ? 'po' : 'jo') . "\n";
 echo "Host: {$cfg['host']}:{$cfg['port']}\n";
 echo "User: {$cfg['user']}\n\n";
